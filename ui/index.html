@@ -1,0 +1,27 @@
+<html> 
+	<head>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="main.css">
+
+		<script src="jquery/jquery-2.1.4.min.js"></script>
+		<script src="bootstrap/bootstrap.min.js"></script>
+		<script src="scripts/react.js"></script>
+		<script src="scripts/react-dom.js"></script>
+		<script src="scripts/app.js"></script>
+	</head>
+	<body>
+		<div id="main" class="container-fluide"></div>
+		<script>
+			ReactDOM.render(
+				React.createElement(
+					Main, 
+					{
+						host: "rdksphinx-v",
+						port: 9307
+					}), 
+				document.getElementById("main"));
+		</script>
+  </body>
+</html>

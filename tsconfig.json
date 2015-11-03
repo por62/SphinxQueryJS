@@ -1,0 +1,19 @@
+{
+	"compilerOptions": 
+	{
+		"target": "ES5",
+		"module": "commonjs",
+		"outDir": "out",
+		"noLib": false
+	},
+	"exclude": [
+		"out",
+		"ui",
+		"typings"	
+	],
+	"files": 
+	[
+		"app.ts",
+		"server.ts"	
+	]
+}
