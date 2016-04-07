@@ -28,8 +28,22 @@ function open(url : string) : void
     childProcess.execFile(command, args);
 }
 
-const npm = childProcess.spawn('npm.cmd', ['install']);
-npm.on('close', (code) => 
+let npmProc: childProcess.ChildProcess; 
+
+if(process.platform == "win32")
+{
+    npmProc = childProcess.spawn('npm.cmd', ['install']);
+} 
+else
+{
+    npmProc = childProcess.spawn('npm', ['install']);
+} 
+npmProc.on('error', (err) =>
+{
+   console.log(`ERROR ${err}`);
+});
+
+npmProc.on('close', (code) => 
 {
    console.log(`npm install exited with code ${code}`);
 
