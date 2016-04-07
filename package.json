@@ -1,0 +1,25 @@
+{
+  "name": "SphinxQueryJS",
+  "version": "1.0.0",
+  "description": "Query GUI util for sphinx search engine",
+  "main": "run.bat",
+  "dependencies": {
+    "express": "^4.13.3",
+    "body-parser": "^1.14.1",
+    "mysql": "^2.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "-"
+  },
+  "keywords": [
+    "sphinx",
+    "query"
+  ],
+  "author": "Pavel Obuchov",
+  "license": "ISC"
+}
