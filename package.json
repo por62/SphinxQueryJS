@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "^4.13.3",
     "body-parser": "^1.14.1",
-    "mysql": "^2.9.0"
+    "mysql": "^2.9.0",
+    "open": "^0.0.5"
   },
   "devDependencies": {},
   "scripts": {
