@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "-"
+    "url": "http://project-v:8080/tfs/Kommersant/_git/SphinxQLUtil"
   },
   "keywords": [
     "sphinx",
