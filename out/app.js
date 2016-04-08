@@ -20,8 +20,17 @@ function open(url) {
     }
     childProcess.execFile(command, args);
 }
-var npm = childProcess.spawn('npm.cmd', ['install']);
-npm.on('close', function (code) {
+var npmProc;
+if (process.platform == "win32") {
+    npmProc = childProcess.spawn('npm.cmd', ['install']);
+}
+else {
+    npmProc = childProcess.spawn('npm', ['install']);
+}
+npmProc.on('error', function (err) {
+    console.log("ERROR " + err);
+});
+npmProc.on('close', function (code) {
     console.log("npm install exited with code " + code);
     open('http://localhost:8700/');
     var svc = new server_1.Server();
