@@ -55,6 +55,18 @@ class Controller
                 status: null
             }));    
 	}
+    
+    stop() : void
+    {
+        this.mainQuery.abort();
+        this.tablesQuery.abort();
+                
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "/stop");
+        xhr.setRequestHeader("content-type","application/json");
+        xhr.send();
+    }
 }
 
 class Query
@@ -108,4 +120,15 @@ class Query
             });
     }
     
+    abort() : void
+    {
+        this.xhr && (this.xhr.abort());
+    }
 }
+
+var controller: Controller = new Controller();
+
+window.onbeforeunload = (event: BeforeUnloadEvent) =>
+{
+    controller.stop();
+}; 

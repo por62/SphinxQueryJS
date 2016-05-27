@@ -13,8 +13,6 @@ class Main extends React.Component<IMainProps, IMainState>
  	host: string;
 	port: number;
     
-    controller: Controller = new Controller();
-    
     constructor () {
         super();
         this.changeStatement = this.changeStatement.bind(this);
@@ -34,7 +32,7 @@ class Main extends React.Component<IMainProps, IMainState>
         this.host = host == undefined ? this.host : host;
         this.port = port == undefined ? this.port : port;
         
-        this.controller.connectionUpdate(
+        controller.connectionUpdate(
             {
                 query: null,
                 withMetadata: false,
@@ -46,7 +44,7 @@ class Main extends React.Component<IMainProps, IMainState>
     {
         this.statement = statement;
         
-        this.controller.queryUpdate(
+        controller.queryUpdate(
             {
                 query: statement,
                 withMetadata: true,
@@ -70,7 +68,7 @@ class Main extends React.Component<IMainProps, IMainState>
                                     <AutocompleteInput value={this.props.host} placeholder="адрес" onSelect={s => this.changeHostOrPort(s)}/>
                                     <AutocompleteInput value={this.props.port.toString()} placeholder="порт" onSelect={s => this.changeHostOrPort(null, parseInt(s))}/>
                                 </div>
-                                <Table sendQuery={this.controller.hostChanged} getResult={q => q.result}/>
+                                <Table sendQuery={controller.hostChanged} getResult={q => q.result}/>
                             </div>
                         </div>
                     </div>
@@ -80,7 +78,7 @@ class Main extends React.Component<IMainProps, IMainState>
                                 <AutocompleteInput value={this.statement} placeholder="текст запроса" onSelect={this.changeStatement}/>
                             </div>
                             <div className="panel-body">
-                                <Table sendQuery={this.controller.resultChaged} getResult={q => q.result}/>
+                                <Table sendQuery={controller.resultChaged} getResult={q => q.result}/>
                             </div>
                         </div>    
                     </div>           
@@ -90,7 +88,7 @@ class Main extends React.Component<IMainProps, IMainState>
                                 <h4>Meta</h4>
                             </div>
                             <div className="panel-body">
-                                <Table sendQuery={this.controller.resultChaged} getResult={q => q.meta}/>
+                                <Table sendQuery={controller.resultChaged} getResult={q => q.meta}/>
                             </div>
                         </div>
                         <div className="panel panel-default">
@@ -98,7 +96,7 @@ class Main extends React.Component<IMainProps, IMainState>
                                 <h4>Status</h4>
                             </div>
                             <div className="panel-body">
-                                <Table sendQuery={this.controller.resultChaged}  getResult={q => q.status}/>
+                                <Table sendQuery={controller.resultChaged}  getResult={q => q.status}/>
                             </div>
                         </div>
                     </div>

@@ -2,6 +2,7 @@
 /// <reference path="typings\body-parser\body-parser.d.ts" />
 /// <reference path="typings\mysql\mysql.d.ts" />
 
+import * as http from "http";
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import { IConnection, createConnection, IError } from "mysql";
@@ -10,16 +11,18 @@ export class Server
 {
 	port: number = 8700;
 	app: express.Application;
+	httpServer: http.Server;
 	
 	run() : void
 	{
 		this.app = express();
 		
-		this.app
+		this.httpServer = this.app
 			.use(express.static(__dirname + "/../ui"))
 			.use(bodyParser.json())
 			.post('/makeQuery', this.querySphinx)
-			.listen(this.port);
+			.get('/stop', () => this.httpServer && this.httpServer.close())
+		 	.listen(this.port);
 	}
 
 	querySphinx(req : express.Request, res : express.Response) : void
