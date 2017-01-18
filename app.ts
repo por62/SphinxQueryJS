@@ -1,6 +1,4 @@
-import { Server } from "./server"
 import * as childProcess from "child_process"
-
 
 function open(url : string) : void 
 {
@@ -42,6 +40,8 @@ npmProc.on('error', (err) =>
 {
    console.log(`ERROR ${err}`);
 });
+
+import { Server } from "./server"
 
 npmProc.on('close', (code) => 
 {

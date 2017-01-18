@@ -1,7 +1,7 @@
 {
-  "name": "SphinxQueryJS",
+  "name": "sphinxqueryjs",
   "version": "1.0.0",
-  "description": "Query GUI util for sphinx search engine",
+  "description": "Tool to query the Sphinx engine in the browser",
   "main": "run.bat",
   "dependencies": {
     "express": "^4.13.3",
@@ -9,18 +9,23 @@
     "mysql": "^2.9.0",
     "open": "^0.0.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "express": "^4.13.3",
+    "body-parser": "^1.14.1",
+    "mysql": "^2.9.0",
+    "open": "^0.0.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "http://project-v:8080/tfs/Kommersant/_git/SphinxQLUtil"
+    "url": "https://github.com/por62/SphinxQueryJS.git"
   },
   "keywords": [
     "sphinx",
     "query"
   ],
-  "author": "Pavel Obuchov",
-  "license": "ISC"
+  "author": "por62",
+  "license": "MIT"
 }

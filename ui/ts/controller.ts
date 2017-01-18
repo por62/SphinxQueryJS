@@ -1,3 +1,4 @@
+/// <reference path="FreeEvent.ts" />
 interface IQueryParams
 {
     query: string;

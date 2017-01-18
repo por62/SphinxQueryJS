@@ -1,14 +1,18 @@
 <html> 
 	<head>
 		<link rel="shortcut icon" href="favicon.ico"/>
-		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--		<link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">-->
 
-		<script src="jquery/jquery-2.1.4.min.js"></script>
-		<script src="bootstrap/bootstrap.min.js"></script>
-		<script src="scripts/react.js"></script>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--		<script src="scripts/react.js"></script>
 		<script src="scripts/react-dom.js"></script>
+-->
+		<script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+		<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+
+		<link rel="stylesheet" href="main.css">
 		<script src="scripts/app.js"></script>
 	</head>
 	<body>
@@ -19,7 +23,7 @@
 				React.createElement(
 					Main, 
 					{
-						host: "rdksphinx-v",
+						host: "",
 						port: 9307
 					}), 
 				document.getElementById("main"));
