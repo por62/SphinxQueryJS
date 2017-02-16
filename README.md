@@ -3,9 +3,9 @@ Tool to query the Sphinx engine in the browser
 
 ## Installation
 
-_On Windows_
-
 ---
+
+_On Windows_
 
 1. Clone this repository in your local folder. For example: C:\SphinxQueryJS
 
@@ -21,9 +21,10 @@ _On Windows_
     
     #### run.bat
 
-_On OsX_
 
 ---
+
+_On OsX_
 
 1. Clone this repository in your local folder. For example: /Applications/SphinxQueryJS
 
