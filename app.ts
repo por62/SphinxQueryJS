@@ -41,14 +41,12 @@ npmProc.on('error', (err) =>
    console.log(`ERROR ${err}`);
 });
 
-import { Server } from "./server"
 
 npmProc.on('close', (code) => 
 {
    console.log(`npm install exited with code ${code}`);
 
    open('http://localhost:8700/');
-   
-   let svc = new Server();
-   svc.run();
+
+   let svcProc = childProcess.spawn('node', ['out/serverstarter.js']);
 });

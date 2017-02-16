@@ -14,6 +14,7 @@
 	"files": 
 	[
 		"app.ts",
-		"server.ts"	
+		"server.ts",	
+		"serverstarter.ts"	
 	]
 }
