@@ -37,6 +37,10 @@ _On OsX_
 
     #### tsc -p /Applications/SphinxQueryJS
 
-    #### sh /Applications/SphinxQueryJS/run
+    #### cd /Applications/SphinxQueryJS
+
+    #### chmod +x run
+
+    #### ./run
     
 
